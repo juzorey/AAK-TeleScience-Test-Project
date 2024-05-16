@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import './App.css'
+import '@styles/App.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import Home from './pages/home.jsx'
-import ContextProvider from './services/ContextProvider.jsx'
+import Home from '@pages/home/Home.jsx'
+import ContextProvider from './services/context/ContextProvider.jsx'
 function App() {
 
   return (

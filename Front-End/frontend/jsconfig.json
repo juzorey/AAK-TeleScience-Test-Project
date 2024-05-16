@@ -1,0 +1,14 @@
+//creation of absolute paths for the project
+
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/styles": ["styles/*"],
+      "@/hooks": ["hooks/*"],
+
+      
+    }
+  },
+  "include":["src"]
+}

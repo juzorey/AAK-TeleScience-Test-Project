@@ -1,29 +1,26 @@
 
-import Context from '../services/Context.jsx';
+import Context from '@services/context/Context.jsx';
 import Chart from 'react-apexcharts'
 import React,{useContext,useState,useEffect} from 'react'; 
 import ReactApexChart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts';
 
 
+// Responsible for rendering the stacked bar chart
 
-const Stacked = ({option})=>{
-
-
+const ChartDisplay = ({option})=>{
   
-
+//Global state
   const {contextDataObj} = useContext(Context); 
-
-console.log(contextDataObj.malePercentArray,'contextDataObj')
-
-const[data,setData] = useState({})
+  console.log(contextDataObj.malePercentArray,'Data is loaded in global from API')
 
 
+//Local chart state
+  const[chartData,setChartData] = useState({})
+  console.log(chartData,'Data is loaded in chart from global state')
 
+// Renders chartdata when the global state has recevied data from API
   useEffect(()=>{
-
-    setData(
-
+    setChartData(
       {
         series: [{
           name: 'Males',
@@ -35,7 +32,6 @@ const[data,setData] = useState({})
         }
         ]
       ,
-
           options: {
             chart: {
               type: 'bar',
@@ -111,18 +107,11 @@ const[data,setData] = useState({})
 
 return(
   <div id="chart">
-    {data && data?.series && <ReactApexChart options={data?.options} series={data?.series} type="bar" height={440} width={600}/>
-
+    {chartData && chartData?.series && <ReactApexChart options={chartData?.options} series={chartData?.series} type="bar" height={440} width={600}/>
       }
-
-   
-
-</div>
-
-
-
+  </div>
 
 )
 }
 
-export default Stacked;
+export default ChartDisplay;
