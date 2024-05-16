@@ -1,6 +1,4 @@
-# AAK-TeleScience-Test-Project
-
-
+# CHANGE THE NAME ON THE GRAPH aND CSV DONWLOAD BTN
 # AAK-TeleScience-Test-Project
 Due Data Friday May 17th
 Objective:Make a funnel chart of your country's population like the one below in react, populated by data from django restframe-work using best practices
@@ -16,17 +14,21 @@ Objective:Make a funnel chart of your country's population like the one below in
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Configuration](#configuration)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
+    1. [Front-end](#Front-End-Installation)
+    2. [Back-end Dependencies](#Back-End-Installation)
+5. [Usage](#usage)
+6. [Configuration](#configuration)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
 ## Introduction
 Used React.js, Django RestFramwork and React ApexCharts to create funnel chart of your country's population
 For the requiements of the best test, I used best practices with Api, State Handling, Race Control, Throttling, Class Based Views, Data Fixtures and Optimization
+- The ports are open to all so you may view the rest framework and call from any port
 
-
+ - For the rquierments of this project, I  didn't implement redux, react-query or axios since it would've added unnecesary omplexity for a project that had less than 10 states and a small dataset project
+ - Neccesarliy  for scaliblity would use redux, react-query, axios, django authentication, django signals, django businesslogic seperation, django permissions, django security keys
 image
 
 
@@ -56,8 +58,15 @@ Optional
 ## Installation
 Step-by-step instructions on how to get the project running locally
 <pre>
-```bash
+```sh
 git clone https://github.com/your-username/project-name.git
 ```
 </pre>
 Head
+### Front-End-Installation
+### Back-End-Installation
+in backend folder run manage.py loaddata age-sex-us-2023.json
+
+will i have to make migrations
+
+
