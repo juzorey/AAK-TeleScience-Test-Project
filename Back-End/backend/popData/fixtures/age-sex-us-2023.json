@@ -1,0 +1,202 @@
+
+
+[
+  {
+    "model": "popData.popdatatable",
+    "ID": 1,
+    "fields": {
+      "Age_Group": "0 to 5",
+      "Male_Estimate": 9394890,
+      "Percent_Male_Estimate": 0.057,
+      "Female_Estimate": 8963309,
+      "Percent_Female_Estimate": 0.053
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 2,
+    "fields": {
+      "Age_Group": "5 to 9",
+      "Male_Estimate": 10110917,
+      "Percent_Male_Estimate": 0.061,
+      "Female_Estimate": 9659397,
+      "Percent_Female_Estimate": 0.057
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 3,
+    "fields": {
+      "Age_Group": "10 to 14",
+      "Male_Estimate": 10892415,
+      "Percent_Male_Estimate": 0.066,
+      "Female_Estimate": 10327799,
+      "Percent_Female_Estimate": 0.061
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 4,
+    "fields": {
+      "Age_Group": "15 to 19",
+      "Male_Estimate": 11167522,
+      "Percent_Male_Estimate": 0.068,
+      "Female_Estimate": 10618136,
+      "Percent_Female_Estimate": 0.063
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 5,
+    "fields": {
+      "Age_Group": "20 to 24",
+      "Male_Estimate": 11488577,
+      "Percent_Male_Estimate": 0.07,
+      "Female_Estimate": 10957463,
+      "Percent_Female_Estimate": 0.065
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 6,
+    "fields": {
+      "Age_Group": "25 to 29",
+      "Male_Estimate": 11245260,
+      "Percent_Male_Estimate": 0.068,
+      "Female_Estimate": 10762368,
+      "Percent_Female_Estimate": 0.064
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 7,
+    "fields": {
+      "Age_Group": "30 to 34",
+      "Male_Estimate": 11785090,
+      "Percent_Male_Estimate": 0.071,
+      "Female_Estimate": 11440546,
+      "Percent_Female_Estimate": 0.068
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 8,
+    "fields": {
+      "Age_Group": "35 to 39",
+      "Male_Estimate": 11322522,
+      "Percent_Male_Estimate": 0.069,
+      "Female_Estimate": 11013337,
+      "Percent_Female_Estimate": 0.066
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 9,
+    "fields": {
+      "Age_Group": "40 to 44",
+      "Male_Estimate": 10939843,
+      "Percent_Male_Estimate": 0.066,
+      "Female_Estimate": 10771942,
+      "Percent_Female_Estimate": 0.064
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 10,
+    "fields": {
+      "Age_Group": "45 to 49",
+      "Male_Estimate": 9853198,
+      "Percent_Male_Estimate": 0.06,
+      "Female_Estimate": 9787727,
+      "Percent_Female_Estimate": 0.058
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 11,
+    "fields": {
+      "Age_Group": "50 to 54",
+      "Male_Estimate": 10447394,
+      "Percent_Male_Estimate": 0.063,
+      "Female_Estimate": 10388127,
+      "Percent_Female_Estimate": 0.062
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 12,
+    "fields": {
+      "Age_Group": "55 to 59",
+      "Male_Estimate": 10163454,
+      "Percent_Male_Estimate": 0.062,
+      "Female_Estimate": 10390161,
+      "Percent_Female_Estimate": 0.062
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 13,
+    "fields": {
+      "Age_Group": "60 to 64",
+      "Male_Estimate": 10492488,
+      "Percent_Male_Estimate": 0.064,
+      "Female_Estimate": 11081365,
+      "Percent_Female_Estimate": 0.066
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 14,
+    "fields": {
+      "Age_Group": "65 to 69",
+      "Male_Estimate": 8798968,
+      "Percent_Male_Estimate": 0.053,
+      "Female_Estimate": 9760529,
+      "Percent_Female_Estimate": 0.058
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 15,
+    "fields": {
+      "Age_Group": "70 to 74",
+      "Male_Estimate": 7149850,
+      "Percent_Male_Estimate": 0.043,
+      "Female_Estimate": 8188725,
+      "Percent_Female_Estimate": 0.049
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 16,
+    "fields": {
+      "Age_Group": "75 to 79",
+      "Male_Estimate": 4901587,
+      "Percent_Male_Estimate": 0.03,
+      "Female_Estimate": 6103874,
+      "Percent_Female_Estimate": 0.036
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 17,
+    "fields": {
+      "Age_Group": "80 to 84",
+      "Male_Estimate": 2861152,
+      "Percent_Male_Estimate": 0.017,
+      "Female_Estimate": 3897687,
+      "Percent_Female_Estimate": 0.023
+    }
+  },
+  {
+    "model": "popData.popdatatable",
+    "ID": 18,
+    "fields": {
+      "Age_Group": "85+",
+      "Male_Estimate": 2213087,
+      "Percent_Male_Estimate": 0.013,
+      "Female_Estimate": 3946856,
+      "Percent_Female_Estimate": 0.023
+    }
+  }
+]
