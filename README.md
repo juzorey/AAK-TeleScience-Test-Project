@@ -3,6 +3,10 @@
 
 # AAK-TeleScience-Test-Project
 Due Data Friday May 17th
+Objective:Make a funnel chart of your country's population like the one below in react, populated by data from django restframe-work using best practices
+
+![image](https://github.com/juzorey/AAK-TeleScience-Test-Project/assets/76601270/2560a8b2-2a6c-4ee1-9942-fdd16681cd66)
+
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
@@ -19,19 +23,41 @@ Due Data Friday May 17th
 8. [Contact](#contact)
 
 ## Introduction
-A brief overview of the project, what it does, and why it is useful. Keep it to a few sentences to grab attention.
+Used React.js, Django RestFramwork and React ApexCharts to create funnel chart of your country's population
+For the requiements of the best test, I used best practices with Api, State Handling, Race Control, Throttling, Class Based Views, Data Fixtures and Optimization
+
+
+image
+
+
 
 ## Features
-- Feature 1: Short description.
-- Feature 2: Short description.
-- Feature 3: Short description.
+- Feature 1: Django Api Request Throttling.
+- Feature 2: Django Sqlite3.
+- Feature 3: Django Fixtures.
+- Feature 4: React useFetch Custom Hook.
+- Feature 5: React Api Context State Management.
+- Feature 6: React Api Fetch Controllers.
+- Feature 7: React Api Race Condition Control.
+- Feature 8: React Error and Loading Control.
+- Feature 9: React Api Fetch Controllers.
+- Feature 10: React Optimization Code Splitting.
+  
 
-## Installation
-Step-by-step instructions on how to get the project running locally.
 
 ### Prerequisites
-List any prerequisites (e.g., software that needs to be installed).
+There is a a requirments.txt that you can download to run on your local machine
+- sqlite3
+- DjangoRestFrameWork
+- Npm
+Optional
+- Run backend on virtual environment
 
-```sh
-# Example for a Node.js project
-npm install
+## Installation
+Step-by-step instructions on how to get the project running locally
+<pre>
+```bash
+git clone https://github.com/your-username/project-name.git
+```
+</pre>
+Head
