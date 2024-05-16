@@ -4,7 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
-
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+  display: flex;
+  justify-self: center;;
+  align-items: center;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -37,6 +43,6 @@
   padding: 2em;
 }
 
-.read-the-docs {
+/* .read-the-docs {
   color: #888;
-}
+} */
