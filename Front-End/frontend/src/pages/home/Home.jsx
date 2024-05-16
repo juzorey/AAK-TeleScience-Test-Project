@@ -1,9 +1,10 @@
-import React,{onClick} from "react";
+import React,{onClick, lazy, Suspense} from "react";
 import useFetchData from "@hooks/useFetchData.jsx";
-import ChartDisplay from "@components/Charts.jsx";
-import { BASE_URL } from "@utils/constants.js";
 
+import { BASE_URL } from "@utils/constants.js";
 // Renders the chart display
+const ChartDisplay = lazy(() => import("@components/Charts.jsx"));
+//Rendser home page with chart display
 const Home = () => {
 
   const {loading, error } = useFetchData(BASE_URL);
@@ -13,6 +14,7 @@ const Home = () => {
 
   return (
     <>
+    
       <ChartDisplay/>
 
     </>

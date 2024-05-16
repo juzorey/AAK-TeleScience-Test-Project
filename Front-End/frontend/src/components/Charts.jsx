@@ -10,13 +10,15 @@ import ReactApexChart from 'react-apexcharts';
 const ChartDisplay = ({option})=>{
   
 //Global state
-  const {contextDataObj} = useContext(Context); 
-  console.log(contextDataObj.malePercentArray,'Data is loaded in global from API')
+  const {contextChartData} = useContext(Context); 
+
+
+
 
 
 //Local chart state
   const[chartData,setChartData] = useState({})
-  console.log(chartData,'Data is loaded in chart from global state')
+
 
 // Renders chartdata when the global state has recevied data from API
   useEffect(()=>{
@@ -24,11 +26,11 @@ const ChartDisplay = ({option})=>{
       {
         series: [{
           name: 'Males',
-          data: [...contextDataObj.malePercentArray]
+          data: [...contextChartData.malePercentArray]
         },
         {
           name: 'Females',
-          data: [...contextDataObj.femalePercentArray]
+          data: [...contextChartData.femalePercentArray]
         }
         ]
       ,
@@ -83,7 +85,7 @@ const ChartDisplay = ({option})=>{
               text: 'United States Population by Age Group (2022)',
             },
             xaxis: {
-              categories: [...contextDataObj.ageGroupArray],
+              categories: [...contextChartData.ageGroupArray],
               title: {
                 text: 'Percent'
               },
@@ -97,8 +99,11 @@ const ChartDisplay = ({option})=>{
         
         
         })
-
-  },[contextDataObj.malePercentArray])
+        return ()=>{
+          setChartData({})
+        }
+        console.log('data loaded into chart from context')
+  },[contextChartData.malePercentArray])
   
   
 
@@ -108,7 +113,7 @@ const ChartDisplay = ({option})=>{
 return(
   <div id="chart">
     {chartData && chartData?.series && <ReactApexChart options={chartData?.options} series={chartData?.series} type="bar" height={440} width={600}/>
-      }
+}
   </div>
 
 )

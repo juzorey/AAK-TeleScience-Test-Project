@@ -11,11 +11,15 @@ function useFetchData (url){
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  
+//Race control for fetching data
+const abortControllerRef = useRef(null);
 
 
   const fetchData = async () => {
 
-  
+    abortControllerRef.current?.abort();
+    abortControllerRef.current = new AbortController();
 
     setIsLoading(true)
 
@@ -25,7 +29,9 @@ function useFetchData (url){
         method: 'GET',
         headers: {
           'Content-Type': 'application/json', 
-        }});
+        },
+        signal: abortControllerRef.current?.signal
+      });
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
@@ -33,6 +39,10 @@ function useFetchData (url){
       setDataState(jsonData);
 
     } catch (error) {
+      if (error.name === 'AbortError') {
+        console.log('Fetch aborted');
+        return;
+      }
       setError(error);
     }finally{
       setIsLoading(false);

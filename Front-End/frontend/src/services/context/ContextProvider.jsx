@@ -6,51 +6,132 @@ const ContextProvider = ({children}) => {
 
 
 //States
-  const [dataState, setDataState] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(true)
-  const [maleArray, setMaleArray] = useState([])
-  const [malePercentArray, setMalePercentArray] = useState([])
-  const [femaleArray, setFemaleArray] = useState([])
-  const [femalePercentArray, setFemalePercentArray] = useState([])
-  const [ageGroupArray, setAgeGroupArray] = useState([])
-
-
+  const [dataState, setDataState] = useState([])
+  const [contextChartData, setContextChartData] = useState({
+    ageGroupArray: [],
+    maleArray: [],  
+    malePercentArray: [],
+    femaleArray: [],
+    femalePercentArray: [],
+  })
 
 
 //if there is data from the API then it will load into the states and be accessible globally
   useEffect(()=>{
 
-    setIsLoaded(true)
     if(dataState.length !== 0 || dataState[0] !== undefined){
-      const ageGroupArray = dataState.map(data => data.Age_Group).reverse();
-      const maleArray = dataState.map(data => data.Male_Estimate).reverse();
-      const malePercentArray = dataState.map(data => data.Percent_Male_Estimate * 100 ).reverse();
-      const femalArray = dataState.map(data => data.Female_Estimate).reverse();
-      const femalePercentArray = dataState.map(data => data.Percent_Female_Estimate * -100 ).reverse();
+      console.log('loading data into contextChart')  
 
-      setAgeGroupArray(ageGroupArray)
-      setMaleArray(maleArray)
-      setMalePercentArray(malePercentArray)
-      setFemaleArray(femalArray)
-      setFemalePercentArray(femalePercentArray)
-      console.log(femalePercentArray,'Data Loaded in context from API')  
+      setContextChartData({
+        ageGroupArray: dataState?.map(data => data.Age_Group).reverse(),
+        maleArray: dataState?.map(data => data.Male_Estimate).reverse(),
+        malePercentArray: dataState?.map(data => data.Percent_Male_Estimate * 100 ).reverse(),
+        femaleArray: dataState?.map(data =>data.Female_Estimate).reverse(),
+        femalePercentArray: dataState?.map(data =>data.Percent_Female_Estimate * -100 ).reverse()
+
+      })
+  
     }
 
   },[dataState])
 
-//Organized the data into an object to be passed down to the children components
-  const contextDataObj = {
-    isLoaded: isLoaded,
-    ageGroupArray: ageGroupArray,
-    maleArray: maleArray,
-    malePercentArray: malePercentArray,
-    femaleArray: femaleArray,
-    femalePercentArray: femalePercentArray
-  }
+  
+
+  const[chartData,setChartData] = useState({})
+
+  useEffect(()=>{
+    setChartData(
+      {
+        series: [{
+          name: 'Males',
+          data: [...contextChartData.malePercentArray]
+        },
+        {
+          name: 'Females',
+          data: [...contextChartData.femalePercentArray]
+        }
+        ]
+      ,
+          options: {
+            chart: {
+              type: 'bar',
+              height: 440,
+              stacked: true
+            },
+            colors: ['#008FFB', '#FF4560'],
+            plotOptions: {
+              bar: {
+                borderRadius: 5,
+                borderRadiusApplication: 'end', // 'around', 'end'
+                borderRadiusWhenStacked: 'all', // 'all', 'last'
+                horizontal: true,
+                barHeight: '80%',
+              },
+            },
+            dataLabels: {
+              enabled: false
+            },
+            stroke: {
+              width: 1,
+              colors: ["#fff"]
+            },
+            
+            grid: {
+              xaxis: {
+                lines: {
+                  show: false
+                }
+              }
+            },
+            yaxis: {
+              stepSize: 1
+            },
+            tooltip: {
+              shared: false,
+              x: {
+                formatter: function (val) {
+                  return val
+                }
+              },
+              y: {
+                formatter: function (val) {
+                  return Math.abs(Math.round(val)) + "%"
+                }
+              }
+            },
+            title: {
+              text: 'United States Population by Age Group (2022)',
+            },
+            xaxis: {
+              categories: [...contextChartData.ageGroupArray],
+              title: {
+                text: 'Percent'
+              },
+              labels: {
+                formatter: function (val) {
+                  return Math.abs(Math.round(val)) + "%"
+                }
+              }
+            },
+          },
+        
+        
+        })
+        return ()=>{
+          setChartData({})
+        }
+        console.log('data loaded into chart from context')
+  },[contextChartData.malePercentArray])
+  
+
+
+
+
+
 
 
   return( 
-    <Context.Provider value={{contextDataObj, dataState, setDataState}}>
+    <Context.Provider value={{contextChartData, dataState, setDataState, chartData}}>
       {children}
     </Context.Provider>)
 }
