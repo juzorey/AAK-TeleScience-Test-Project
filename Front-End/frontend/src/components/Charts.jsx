@@ -76,7 +76,7 @@ const ChartDisplay = ({})=>{
           }
         },
         title: {
-          text: 'Mauritius population pyramid 2011'
+          text: 'Population of USA by Age and Sex(2023)'
         },
         xaxis: {
           categories: ['85+', '80 to 84', '75 to 79', '70 to 74', '65 to 69', '60 to 64', '55 to 59', '50 to 54', '45 to 49', '40 to 44', '35 to 39', '30 to 34', '25 to 29', '20 to 24', '15 to 19', '10 to 14', '5 to 9', '0 to 5'],
