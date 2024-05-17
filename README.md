@@ -1,7 +1,7 @@
 
 # AAK-TeleScience-Test-Project
 Due Data Friday May 17th
-Objective:Make a funnel chart of your country's population in react, populated by data from django restframe-work using best practices
+Objective: Make a funnel chart of your country's population in React, populated by data from Django Restframe-work using best practices
 
 ![unnamed](https://github.com/juzorey/AAK-TeleScience-Test-Project/assets/76601270/2f49587e-4bd7-4e5d-a747-09f3b75f0fc3)
 
@@ -21,13 +21,12 @@ Objective:Make a funnel chart of your country's population in react, populated b
 5. [Contact](#contact)
 
 ## Introduction
-Used React.js, Django RestFramwork and React ApexCharts to create funnel chart of your country's population
-For the requiements of the best test, I used best practices with Api, State Handling, Race Control, Throttling, Class Based Views, Data Fixtures and Optimization
+Used React.js, Django RestFramwork and React ApexCharts to create funnel chart of country's population
+For the reuire of the best test, I used best practices with Api, State Handling, Race Control, Throttling, Class Based Views, Data Fixtures and Optimization
 - The ports are open to all so you may view the rest framework and call from any port
 
- - For the rquierments of this project, I  didn't implement redux, react-query or axios since it would've added unnecesary omplexity for a project that had less than 10 states and a small dataset project
- - Neccesarliy  for scaliblity would use redux, react-query, axios, django authentication, django signals, django businesslogic seperation, django permissions, django security keys
-image
+ - For the requirements of this project, I  didn't implement redux or react-query or axios since it would've added unnecesary complexity for a project that had less than 10 states and a small dataset 
+ - necessarily for scaliblity, I would use redux or react-query, axios, django authentication, django signals, django businesslogic seperation, django permissions, django security keys
 
 
 
@@ -48,20 +47,20 @@ image
 ### Prerequisites
 There is a a requirments.txt that you can download to run on your local machine
 IF you want to see the rest framework through a port use http://127.0.0.1:8000/api/data
--  sqlite3
-- DjangoRestFrameWork
+
 - Npm
+- Pip
 Optional
 - Run backend on virtual environment
 
 ## Installation
 Step-by-step instructions on how to get the project running locally
-<pre>
+
 ```sh
 git clone https://github.com/your-username/project-name.git
 ```
-</pre>
-Head
+
+
 ### Front-End-Installation
 ```sh
 npm run dev
@@ -71,5 +70,8 @@ while in venv
 ```sh
 pip install -r .\requirements.txt
 ```
-if data didnt load run manage.py loaddata age-sex-us-2023.json
+if data didnt load run 
+```
+python3 manage.py loaddata age-sex-us-2023.json
+```
 
