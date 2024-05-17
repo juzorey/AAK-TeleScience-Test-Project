@@ -1,4 +1,4 @@
-# CHANGE THE NAME ON THE GRAPH aND CSV DONWLOAD BTN
+
 # AAK-TeleScience-Test-Project
 Due Data Friday May 17th
 Objective:Make a funnel chart of your country's population like the one below in react, populated by data from django restframe-work using best practices
@@ -15,12 +15,10 @@ Objective:Make a funnel chart of your country's population like the one below in
 2. [Features](#features)
 3. [Installation](#installation)
     1. [Front-end](#Front-End-Installation)
-    2. [Back-end Dependencies](#Back-End-Installation)
-5. [Usage](#usage)
-6. [Configuration](#configuration)
-7. [Contributing](#contributing)
-8. [License](#license)
-9. [Contact](#contact)
+    2. [Back-end](#Back-End-Installation)
+
+4. [License](#license)
+5. [Contact](#contact)
 
 ## Introduction
 Used React.js, Django RestFramwork and React ApexCharts to create funnel chart of your country's population
@@ -49,7 +47,8 @@ image
 
 ### Prerequisites
 There is a a requirments.txt that you can download to run on your local machine
-- sqlite3
+IF you want to see the rest framework through a port use http://127.0.0.1:8000/api/data
+-  sqlite3
 - DjangoRestFrameWork
 - Npm
 Optional
@@ -64,9 +63,13 @@ git clone https://github.com/your-username/project-name.git
 </pre>
 Head
 ### Front-End-Installation
+```sh
+npm run dev
+```
 ### Back-End-Installation
-in backend folder run manage.py loaddata age-sex-us-2023.json
-
-will i have to make migrations
-
+while in venv
+```sh
+pip install -r .\requirements.txt
+```
+if data didnt load run manage.py loaddata age-sex-us-2023.json
 
