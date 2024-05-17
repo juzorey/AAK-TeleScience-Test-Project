@@ -1,9 +1,9 @@
 
 # AAK-TeleScience-Test-Project
 Due Data Friday May 17th
-Objective:Make a funnel chart of your country's population like the one below in react, populated by data from django restframe-work using best practices
+Objective:Make a funnel chart of your country's population in react, populated by data from django restframe-work using best practices
 
-![image](https://github.com/juzorey/AAK-TeleScience-Test-Project/assets/76601270/2560a8b2-2a6c-4ee1-9942-fdd16681cd66)
+![unnamed](https://github.com/juzorey/AAK-TeleScience-Test-Project/assets/76601270/2f49587e-4bd7-4e5d-a747-09f3b75f0fc3)
 
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
